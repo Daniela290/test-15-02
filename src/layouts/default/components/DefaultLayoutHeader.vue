@@ -29,7 +29,6 @@ const date = computed(() => {
 <style lang="scss" scoped>
 .default-layout-header {
   margin: auto;
-  border-bottom: 1px solid #000;
   //background: $primary;
   @include value('padding-left', 30px, 100px);
   @include value('min-height', 60px, 201px);
