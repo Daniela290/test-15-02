@@ -46,6 +46,7 @@ async function loadData() {
       duration: 3000,
       close: true
     });
+    router.push('/')
     console.log(e)
   } finally {
     loading.value = false

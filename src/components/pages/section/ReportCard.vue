@@ -43,7 +43,6 @@
 </template>
 
 <script setup lang="ts">
-import 'vue3-carousel/carousel.css'
 import {computed, type PropType, ref} from "vue";
 import type {SectionItemI, SectionSpeakerI} from "@/types/sections.ts";
 import ProfileInfo from "@/components/base/BaseProfileInfo.vue";
@@ -52,7 +51,6 @@ import {getHoursMin} from "@/utils/time.ts";
 import ProgressBar from "@/components/base/TimeProgressBar.vue";
 import StillTime from "@/components/pages/section/StillTime.vue";
 import BaseSlider from "@/components/pages/section/SpeakersSlider.vue";
-import {useKeenSlider} from 'keen-slider/vue'
 
 const props = defineProps({
   report: {type: Object as PropType<SectionItemI>, required: true},

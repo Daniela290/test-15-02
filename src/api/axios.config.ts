@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from "@/router";
 
 export const http = axios.create({
-    baseURL: '/api'
+    baseURL: process.env.NODE_ENV === 'development' ? '/api' : '/test-15-02/api'
 })
 
 // http.interceptors.request.use(async (config) => {
