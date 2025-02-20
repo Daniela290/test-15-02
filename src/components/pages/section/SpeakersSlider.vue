@@ -17,7 +17,7 @@ const props = defineProps({
 })
 
 const [container, slider] = useKeenSlider({
-  loop: true,
+  loop: props.slides?.length > 2,
   slides: {
     perView: 2
   },
