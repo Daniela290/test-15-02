@@ -1,0 +1,35 @@
+@use 'sass:math';
+@use "variables.scss";
+
+@function em($pixels, $context: 16px) {
+  @return #{math.div($pixels, $context)}em;
+}
+
+$min-width: 280px;
+$max-width: 1080px;
+
+@mixin value($property, $min-value, $max-value) {
+  & {
+    #{$property}: $min-value;
+  }
+
+  @media screen and ((min-width: $min-width) or (min-height: 450px)) {
+    #{$property}: calc($min-value + #{var(--tmp)}*($max-value - $min-value));
+  }
+
+  @media screen and (min-width: $max-width) {
+    #{$property}: $max-value;
+  }
+}
+
+
+//@mixin value($property, $value, $min-value) {
+//  #{$property}: $min-value + px;
+//
+//  @media (min-width: 320px) {
+//    #{$property}: calc(
+//            #{$min-value + px} + #{($value - $min-value)} * ((100vw - 320px) / #{1920 -
+//            320})
+//    );
+//  }
+//}

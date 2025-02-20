@@ -1,0 +1,53 @@
+@use "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+//@use "variables.scss";
+@import url('keen-slider/keen-slider.css');
+//@use "../fonts/stylesheet.css";
+html, #app{
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include value('padding-left', 15px, 30px);
+  @include value('padding-right', 15px, 60px);
+}
+
+.flex {
+  display: flex;
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-grow {
+    flex-grow: 1;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-align {
+    align-items: center;
+  }
+
+  &-justify {
+    justify-content: center;
+  }
+
+  &-justify-between {
+    justify-content: space-between;
+  }
+}
