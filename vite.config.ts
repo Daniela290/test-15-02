@@ -3,13 +3,13 @@ import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-    plugins: [
-        vue(),
-    ],
     base: process.env.NODE_ENV === 'development' ? '/' : "/test-15-02/",
     build: {
         outDir: "docs"
     },
+    plugins: [
+        vue(),
+    ],
 
     resolve: {
         alias: {
