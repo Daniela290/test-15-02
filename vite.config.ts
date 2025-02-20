@@ -6,6 +6,10 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  base: "/test-15-02/",
+  build: {
+    outDir: "docs"
+  },
 
   resolve: {
     alias: {
